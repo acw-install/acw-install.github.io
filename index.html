@@ -68,7 +68,7 @@
     <div>
         <img class="event-logo" src="/burst.png" alt="Event Logo" width="256" height="256" />
         <h1 style="text-align: center;">Install the ACW 2025 app</h1>
-        <h2 id="subtitle" style="text-align: center;">iOS 17+</h2>
+        <h2 id="subtitle" style="text-align: center; display: none;">iOS 17+</h2>
 
         <div class="store-buttons">
             <a id="androidLink" href="https://play.google.com/store/apps/details?id=dk.mse.acw" target="_blank" rel="noopener noreferrer">
@@ -97,10 +97,10 @@
             if (isAndroid) {
                 document.getElementById("iosBtn").style.display = "none";
                 androidLink.href = "market://details?id=dk.mse.acw";
-                document.getElementById("subtitle").style.display = "none";
             } else if (isIOS) {
                 document.getElementById("androidBtn").style.display = "none";
                 iosLink.href = "itms-apps://itunes.apple.com/app/id6743051117";
+                document.getElementById("subtitle").style.display = "block";
             }
 
             const logo = document.querySelector('.event-logo');
@@ -110,5 +110,5 @@
         };
     </script>
 </body>
-    
+
 </html>
