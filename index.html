@@ -89,11 +89,9 @@
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
             if (isAndroid) {
-                document.getElementById("iosBtn").classList.add("dimmed");
-                window.open('market://details?id=dk.mse.acw', '_blank');
+                document.getElementById("iosBtn").style.display = "none";
             } else if (isIOS) {
-                document.getElementById("androidBtn").classList.add("dimmed");
-                window.open('itms-apps://itunes.apple.com/app/id6743051117', '_blank');
+                document.getElementById("androidBtn").style.display = "none";
             }
 
             const logo = document.querySelector('.event-logo');
