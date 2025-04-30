@@ -96,12 +96,16 @@
             if (isAndroid) {
                 document.getElementById("androidLink").style.display = "none";
                 androidLink.href = "market://details?id=dk.mse.acw";
+                androidLink.style.margin = "20px auto";
             } else if (isIOS) {
                 document.getElementById("androidBtn").style.display = "none";
                 iosLink.href = "itms-apps://itunes.apple.com/app/id6743051117";
                 document.getElementById("subtitle").style.display = "block";
+                iosLink.style.margin = "20px auto";
             } else {
                 document.body.style.alignItems = "center";
+                androidLink.style.margin = "20px 10px";
+                iosLink.style.margin = "20px 10px";
             }
 
             const logo = document.querySelector('.event-logo');
