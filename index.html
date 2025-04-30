@@ -71,16 +71,16 @@
         <h2 id="subtitle" style="text-align: center; display: none;">iOS 17+</h2>
 
         <div class="store-buttons">
-            <a id="androidLink" href="https://play.google.com/store/apps/details?id=dk.mse.acw" target="_blank" rel="noopener noreferrer">
-                <img id="androidBtn"
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                    alt="Get it on Google Play"
-                />
-            </a>
             <a id="iosLink" href="https://apps.apple.com/app/id6743051117" target="_blank" rel="noopener noreferrer">
                 <img id="iosBtn"
                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                     alt="Download on the App Store"
+                />
+            </a>
+            <a id="androidLink" href="https://play.google.com/store/apps/details?id=dk.mse.acw" target="_blank" rel="noopener noreferrer">
+                <img id="androidBtn"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play"
                 />
             </a>
         </div>
@@ -95,7 +95,7 @@
             const iosLink = document.getElementById("iosLink");
 
             if (isAndroid) {
-                document.getElementById("iosBtn").style.display = "none";
+                document.getElementById("androidLink").style.display = "none";
                 androidLink.href = "market://details?id=dk.mse.acw";
             } else if (isIOS) {
                 document.getElementById("androidBtn").style.display = "none";
