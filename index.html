@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ACW 2025 App</title>
+    <title>ACW 2025 APP</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,7 +67,7 @@
 <body>
     <div>
         <img class="event-logo" src="/burst.png" alt="Event Logo" loading="lazy" width="256" height="256" />
-        <h1 style="text-align: center;">ACW 2025 App</h1>
+        <h1 style="text-align: center;">ACW 2025 APP</h1>
         <h2 id="subtitle" style="text-align: center; display: none;">iOS 17+</h2>
 
         <div class="store-buttons">
@@ -97,16 +97,12 @@
             if (isAndroid) {
                 document.getElementById("iosLink").style.display = "none";
                 androidLink.href = "market://details?id=dk.mse.acw";
-            //    androidLink.style.margin = "20px auto";
             } else if (isIOS) {
                 document.getElementById("androidLink").style.display = "none";
                 iosLink.href = "itms-apps://itunes.apple.com/app/id6743051117";
                 document.getElementById("subtitle").style.display = "block";
-            //    iosLink.style.margin = "20px auto";
             } else {
                 document.body.style.alignItems = "center";
-            //    androidLink.style.margin = "20px 10px";
-           //     iosLink.style.margin = "20px 10px";
             }
 
             const logo = document.querySelector('.event-logo');
