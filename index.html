@@ -70,15 +70,16 @@
     <div class="container">
         <img class="event-logo" src="/burst.png" alt="Event Logo" loading="lazy" width="256" height="256" />
         <h1 style="text-align: center;">Install the ACW 2025 app</h1>
+        <h2 id="subtitle" style="text-align: center;">iOS 17+</h2>
 
         <div class="store-buttons">
-            <a id="androidLink" href="market://details?id=dk.mse.acw" target="_blank" rel="noopener noreferrer">
+            <a id="androidLink" href="https://play.google.com/store/apps/details?id=dk.mse.acw"; target="_blank" rel="noopener noreferrer">
                 <img id="androidBtn"
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     alt="Get it on Google Play"
                 />
             </a>
-            <a id="iosLink" href="itms-apps://itunes.apple.com/app/id6743051117" target="_blank" rel="noopener noreferrer">
+            <a id="iosLink" href="https://apps.apple.com/app/id6743051117" target="_blank" rel="noopener noreferrer">
                 <img id="iosBtn"
                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                     alt="Download on the App Store"
@@ -92,10 +93,16 @@
             const isAndroid = /android/i.test(navigator.userAgent);
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
+            const androidLink = document.getElementById("androidLink");
+            const iosLink = document.getElementById("iosLink");
+
             if (isAndroid) {
                 document.getElementById("iosBtn").style.display = "none";
+                androidLink.href = "market://details?id=dk.mse.acw";
+                document.getElementById("subtitle").style.display = "none";
             } else if (isIOS) {
                 document.getElementById("androidBtn").style.display = "none";
+                iosLink.href = "itms-apps://itunes.apple.com/app/id6743051117";
             }
 
             const logo = document.querySelector('.event-logo');
@@ -104,7 +111,9 @@
             });
         };
     </script>
-
 </body>
+
+
+
 
 </html>
