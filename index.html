@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Install the Event App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: opacity 0.6s ease-in;
+        }
+
+        .event-logo.loaded {
+            opacity: 1;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .store-buttons a {
+            display: inline-block;
+            margin: 20px 10px;
+        }
+
+        .store-buttons img {
+            height: 60px;
+            width: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .dimmed {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img class="event-logo" src="/PLACE_HOLDER_EVENT_LOGO.jpeg" alt="Event Logo" loading="lazy" width="120"
+            height="120" />
+        <h1>Install the ACW 2025 app</h1>
+        <p>Click the relevant link for your device below:</p>
+
+        <div class="store-buttons">
+            <a id="androidLink" href="market://details?id=dk.mse.acw" target="_blank" rel="noopener noreferrer">
+                <img id="androidBtn"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play"
+                />
+            </a>
+            <a id="iosLink" href="https://apps.apple.com/app/id123456789" target="_blank" rel="noopener noreferrer">
+                <img id="iosBtn"
+                    src="itms-apps://itunes.apple.com/app/id6743051117"
+                    alt="Download on the App Store"
+                />
+            </a>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const isAndroid = /android/i.test(navigator.userAgent);
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+            if (isAndroid) {
+                document.getElementById("iosBtn").classList.add("dimmed");
+                window.open('https://play.google.com/store/apps/details?id=com.example.android', '_blank');
+            } else if (isIOS) {
+                document.getElementById("androidBtn").classList.add("dimmed");
+                window.open('https://apps.apple.com/app/id123456789', '_blank');
+            }
+
+            const logo = document.querySelector('.event-logo');
+            logo.addEventListener('load', () => {
+                logo.classList.add('loaded');
+            });
+        };
+    </script>
+
+</body>
+
+</html>
