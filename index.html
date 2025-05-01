@@ -36,11 +36,7 @@
             display: block;
             transition: opacity 0.3s ease-in;
         }
-
-        .event-logo.loaded {
-            opacity: 1;
-        }
-
+        
         .store-buttons {
             text-align: center;
         }
@@ -103,11 +99,6 @@
             } else {
                 document.body.style.alignItems = "center";
             }
-
-            const logo = document.querySelector('.event-logo');
-            logo.addEventListener('load', () => {
-                logo.classList.add('loaded');
-            });
         };
     </script>
 </body>
