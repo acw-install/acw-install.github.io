@@ -76,12 +76,11 @@
             if (isAndroid) {
                 document.getElementById("iosLink").style.display = "none";
                 androidLink.href = "market://details?id=dk.mse.acw";
-                document.getElementById("subtitle").textContent = "Download the official festival app";
+                document.getElementById("subtitle").textContent = "Android 12+";
             } else if (isIOS) {
                 document.getElementById("androidLink").style.display = "none";
                 iosLink.href = "itms-apps://itunes.apple.com/app/id6743051117";
-                document.getElementById("subtitle").style.display = "block";
-                document.getElementById("subtitle").textContent = "Download the official festival app, available for iOS 17+";
+                document.getElementById("subtitle").textContent = "iOS 17+";
             }
         };
     </script>
