@@ -47,7 +47,7 @@
     <div>
         <img class="event-logo" src="/burst.png" alt="Event Logo" loading="lazy" width="256" height="256" />
         <h1 style="text-align: center;">ACW 2025 App</h1>
-        <h2 id="subtitle" style="text-align: center; display: none;">The official ACW 2025 app, available for iOS 17+</h2>
+        <h2 id="subtitle" style="text-align: center;">Download the official A Colossal Weekend festival app</h2>
 
         <div class="store-buttons">
             <a id="iosLink" href="https://apps.apple.com/app/id6743051117" target="_blank" rel="noopener noreferrer">
@@ -76,12 +76,12 @@
             if (isAndroid) {
                 document.getElementById("iosLink").style.display = "none";
                 androidLink.href = "market://details?id=dk.mse.acw";
+                document.getElementById("subtitle").textContent = "Download the official ACW 2025 app";
             } else if (isIOS) {
                 document.getElementById("androidLink").style.display = "none";
                 iosLink.href = "itms-apps://itunes.apple.com/app/id6743051117";
                 document.getElementById("subtitle").style.display = "block";
-            } else {
-                document.body.style.alignItems = "center";
+                document.getElementById("subtitle").textContent = "Download the official ACW 2025 app, available for iOS 17+";
             }
         };
     </script>
